@@ -1,0 +1,5096 @@
+{
+  "jar": "Battleships.jar",
+  "nome_projeto": "battleships",
+  "midlet": "Battleship",
+  "canvas": "BattleCanvas",
+  "classes": [
+    {
+      "arquivo": "BattleCanvas.class",
+      "nome": "BattleCanvas",
+      "super": "Canvas",
+      "campos": [
+        {
+          "nome": "STARTING",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "PLACING",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "PROGRESS",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "WAITING_FOR_ENEMY",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "SUSPENDED",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "OVER",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "currScore",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "phase",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "overCounter",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "currentOrientation",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "o1",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "o2",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "o3",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "o4",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "o5",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "e1",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "e2",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "e3",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "e4",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "e5",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "BOARD_SIZE",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "SHIP_COUNT",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "myBoard",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        },
+        {
+          "nome": "enemyBoard",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        },
+        {
+          "nome": "myCheckBoard",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        },
+        {
+          "nome": "enemyCheckBoard",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        },
+        {
+          "nome": "myShips",
+          "desc": "[LShip;",
+          "tipo_c": "Ship**"
+        },
+        {
+          "nome": "enemyShips",
+          "desc": "[LShip;",
+          "tipo_c": "Ship**"
+        },
+        {
+          "nome": "currentShip",
+          "desc": "LShip;",
+          "tipo_c": "Ship*"
+        },
+        {
+          "nome": "placedCounter",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "roundCount",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "showSide",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "winSide",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "message",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "overStr",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "cursorx",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "cursory",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "fire",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "gamea",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "gameb",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "gamec",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "gamed",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "logo",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "cell",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "xoffs",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "w",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "h",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "bwidth",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "bheight",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "score",
+          "desc": "LScore;",
+          "tipo_c": "Score*"
+        },
+        {
+          "nome": "battleship",
+          "desc": "LBattleship;",
+          "tipo_c": "Battleship*"
+        },
+        {
+          "nome": "display",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "tipo_c": "Display*"
+        },
+        {
+          "nome": "listener",
+          "desc": "Ljavax/microedition/lcdui/CommandListener;",
+          "tipo_c": "CommandListener*"
+        },
+        {
+          "nome": "random",
+          "desc": "Ljava/util/Random;",
+          "tipo_c": "Random*"
+        },
+        {
+          "nome": "scoreForm",
+          "desc": "Ljavax/microedition/lcdui/Form;",
+          "tipo_c": "Form*"
+        },
+        {
+          "nome": "levelText",
+          "desc": "Ljavax/microedition/lcdui/TextBox;",
+          "tipo_c": "TextBox*"
+        },
+        {
+          "nome": "wallColor",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "groundColor",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "packetColor",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "storeColor",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "pusherColor",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "useDottedLine",
+          "desc": "Z",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "(LBattleship;LScore;)V",
+          "tipo_ret": "void",
+          "n_instr": 82,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.<init>": 1,
+            "javax/microedition/lcdui/Display.getDisplay": 1,
+            "java/util/Random.<init>": 1,
+            "javax/microedition/lcdui/Image.createImage": 1
+          },
+          "constantes": [
+            [
+              3,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              21,
+              0
+            ],
+            [
+              24,
+              0
+            ],
+            [
+              27,
+              0
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              33,
+              1
+            ],
+            [
+              36,
+              0
+            ],
+            [
+              49,
+              10
+            ],
+            [
+              50,
+              10
+            ],
+            [
+              54,
+              10
+            ],
+            [
+              55,
+              10
+            ],
+            [
+              59,
+              5
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "javax/microedition/lcdui/Canvas.<init>"
+            ],
+            [
+              43,
+              "javax/microedition/lcdui/Display.getDisplay"
+            ],
+            [
+              70,
+              "java/util/Random.<init>"
+            ],
+            [
+              74,
+              "javax/microedition/lcdui/Image.createImage"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "BattleCanvas.currScore"
+            ],
+            [
+              7,
+              "putfield",
+              "BattleCanvas.overCounter"
+            ],
+            [
+              10,
+              "putfield",
+              "BattleCanvas.overStr"
+            ],
+            [
+              13,
+              "putfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              16,
+              "putfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              19,
+              "putfield",
+              "BattleCanvas.fire"
+            ],
+            [
+              22,
+              "putfield",
+              "BattleCanvas.gamea"
+            ],
+            [
+              25,
+              "putfield",
+              "BattleCanvas.gameb"
+            ],
+            [
+              28,
+              "putfield",
+              "BattleCanvas.gamec"
+            ],
+            [
+              31,
+              "putfield",
+              "BattleCanvas.gamed"
+            ],
+            [
+              34,
+              "putfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              37,
+              "putfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              40,
+              "putfield",
+              "BattleCanvas.battleship"
+            ],
+            [
+              44,
+              "putfield",
+              "BattleCanvas.display"
+            ],
+            [
+              47,
+              "putfield",
+              "BattleCanvas.score"
+            ],
+            [
+              52,
+              "putfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              57,
+              "putfield",
+              "BattleCanvas.enemyBoard"
+            ],
+            [
+              61,
+              "putfield",
+              "BattleCanvas.myShips"
+            ],
+            [
+              66,
+              "putfield",
+              "BattleCanvas.message"
+            ],
+            [
+              71,
+              "putfield",
+              "BattleCanvas.random"
+            ]
+          ]
+        },
+        {
+          "nome": "init",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 46,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.getHeight": 1,
+            "javax/microedition/lcdui/Canvas.getWidth": 1,
+            "javax/microedition/lcdui/Canvas.repaint": 1
+          },
+          "constantes": [
+            [
+              12,
+              14
+            ],
+            [
+              18,
+              11
+            ],
+            [
+              25,
+              14
+            ],
+            [
+              27,
+              11
+            ],
+            [
+              35,
+              10
+            ],
+            [
+              38,
+              2
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Canvas.getHeight"
+            ],
+            [
+              6,
+              "javax/microedition/lcdui/Canvas.getWidth"
+            ],
+            [
+              44,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ]
+          ],
+          "fields": [
+            [
+              3,
+              "putfield",
+              "BattleCanvas.h"
+            ],
+            [
+              7,
+              "putfield",
+              "BattleCanvas.w"
+            ],
+            [
+              9,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              11,
+              "getfield",
+              "BattleCanvas.h"
+            ],
+            [
+              17,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              20,
+              "putfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              24,
+              "getfield",
+              "BattleCanvas.h"
+            ],
+            [
+              29,
+              "putfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              32,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              34,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              40,
+              "putfield",
+              "BattleCanvas.xoffs"
+            ]
+          ]
+        },
+        {
+          "nome": "destroy",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "initColors",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 39,
+          "apis": {
+            "javax/microedition/lcdui/Display.isColor": 1,
+            "javax/microedition/lcdui/Display.numColors": 1
+          },
+          "constantes": [
+            [
+              11,
+              27989
+            ],
+            [
+              19,
+              2
+            ],
+            [
+              26,
+              0
+            ],
+            [
+              33,
+              0
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              36,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Display.isColor"
+            ],
+            [
+              6,
+              "javax/microedition/lcdui/Display.numColors"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "BattleCanvas.display"
+            ],
+            [
+              5,
+              "getfield",
+              "BattleCanvas.display"
+            ],
+            [
+              37,
+              "putstatic",
+              "BattleCanvas.useDottedLine"
+            ]
+          ]
+        },
+        {
+          "nome": "setColors",
+          "desc": "(IIIII)V",
+          "tipo_ret": "void",
+          "n_instr": 26,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              -1
+            ],
+            [
+              6,
+              -1
+            ],
+            [
+              11,
+              -1
+            ],
+            [
+              16,
+              -1
+            ],
+            [
+              21,
+              -1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              4,
+              "putstatic",
+              "BattleCanvas.wallColor"
+            ],
+            [
+              9,
+              "putstatic",
+              "BattleCanvas.groundColor"
+            ],
+            [
+              14,
+              "putstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              19,
+              "putstatic",
+              "BattleCanvas.storeColor"
+            ],
+            [
+              24,
+              "putstatic",
+              "BattleCanvas.pusherColor"
+            ]
+          ]
+        },
+        {
+          "nome": "parseColor",
+          "desc": "(Ljava/lang/String;)I",
+          "tipo_ret": "int",
+          "n_instr": 8,
+          "apis": {
+            "java/lang/Integer.parseInt": 1
+          },
+          "constantes": [
+            [
+              2,
+              -1
+            ],
+            [
+              5,
+              16
+            ]
+          ],
+          "chamadas": [
+            [
+              6,
+              "java/lang/Integer.parseInt"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "getRandom",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 24,
+          "apis": {
+            "java/util/Random.nextInt": 1
+          },
+          "constantes": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              11,
+              -1
+            ],
+            [
+              16,
+              10
+            ]
+          ],
+          "chamadas": [
+            [
+              6,
+              "java/util/Random.nextInt"
+            ]
+          ],
+          "fields": [
+            [
+              5,
+              "getfield",
+              "BattleCanvas.random"
+            ]
+          ]
+        },
+        {
+          "nome": "placeEnemyShips",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 96,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              22,
+              10
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              29,
+              1
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              38,
+              5
+            ],
+            [
+              45,
+              4
+            ],
+            [
+              52,
+              3
+            ],
+            [
+              59,
+              2
+            ],
+            [
+              66,
+              1
+            ],
+            [
+              73,
+              0
+            ],
+            [
+              78,
+              0
+            ],
+            [
+              83,
+              1
+            ],
+            [
+              87,
+              0
+            ],
+            [
+              93,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              42,
+              "putfield",
+              "BattleCanvas.e1"
+            ],
+            [
+              49,
+              "putfield",
+              "BattleCanvas.e2"
+            ],
+            [
+              56,
+              "putfield",
+              "BattleCanvas.e3"
+            ],
+            [
+              63,
+              "putfield",
+              "BattleCanvas.e4"
+            ],
+            [
+              70,
+              "putfield",
+              "BattleCanvas.e5"
+            ],
+            [
+              81,
+              "getfield",
+              "BattleCanvas.enemyShips"
+            ]
+          ]
+        },
+        {
+          "nome": "doEnemyShot",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 61,
+          "apis": {
+            "java/lang/StringBuffer.<init>": 1,
+            "java/lang/StringBuffer.append": 4,
+            "java/lang/StringBuffer.toString": 1,
+            "java/io/PrintStream.println": 1
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              11,
+              5
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              17,
+              1
+            ],
+            [
+              21,
+              10
+            ],
+            [
+              25,
+              10
+            ],
+            [
+              38,
+              0
+            ],
+            [
+              40,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              49,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              51,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              53,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              55,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              57,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              58,
+              "java/lang/StringBuffer.toString"
+            ],
+            [
+              59,
+              "java/io/PrintStream.println"
+            ]
+          ],
+          "fields": [
+            [
+              12,
+              "putfield",
+              "BattleCanvas.phase"
+            ],
+            [
+              15,
+              "putfield",
+              "BattleCanvas.winSide"
+            ],
+            [
+              29,
+              "getfield",
+              "BattleCanvas.enemyBoard"
+            ],
+            [
+              46,
+              "getstatic",
+              "System.out"
+            ]
+          ]
+        },
+        {
+          "nome": "placeShip",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 84,
+          "apis": {
+            "java/lang/StringBuffer.<init>": 1,
+            "java/lang/StringBuffer.append": 2,
+            "java/lang/StringBuffer.toString": 1
+          },
+          "constantes": [
+            [
+              21,
+              1
+            ],
+            [
+              24,
+              0
+            ],
+            [
+              29,
+              1
+            ],
+            [
+              35,
+              1
+            ],
+            [
+              41,
+              5
+            ],
+            [
+              44,
+              5
+            ],
+            [
+              47,
+              0
+            ],
+            [
+              52,
+              1
+            ],
+            [
+              57,
+              5
+            ],
+            [
+              59,
+              1
+            ],
+            [
+              66,
+              5
+            ],
+            [
+              67,
+              5
+            ],
+            [
+              82,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              73,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              75,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              79,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              80,
+              "java/lang/StringBuffer.toString"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              4,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              6,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              9,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              11,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              14,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              16,
+              "getfield",
+              "BattleCanvas.currentOrientation"
+            ],
+            [
+              20,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              28,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              32,
+              "getfield",
+              "BattleCanvas.myShips"
+            ],
+            [
+              34,
+              "getfield",
+              "BattleCanvas.placedCounter"
+            ],
+            [
+              38,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              42,
+              "putfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              45,
+              "putfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              48,
+              "putfield",
+              "BattleCanvas.currentOrientation"
+            ],
+            [
+              51,
+              "getfield",
+              "BattleCanvas.placedCounter"
+            ],
+            [
+              54,
+              "putfield",
+              "BattleCanvas.placedCounter"
+            ],
+            [
+              56,
+              "getfield",
+              "BattleCanvas.placedCounter"
+            ],
+            [
+              65,
+              "getfield",
+              "BattleCanvas.placedCounter"
+            ],
+            [
+              69,
+              "putfield",
+              "BattleCanvas.currentShip"
+            ]
+          ]
+        },
+        {
+          "nome": "addShip",
+          "desc": "(LShip;Z)V",
+          "tipo_ret": "void",
+          "n_instr": 113,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              -1
+            ],
+            [
+              3,
+              -1
+            ],
+            [
+              34,
+              2
+            ],
+            [
+              43,
+              0
+            ],
+            [
+              58,
+              1
+            ],
+            [
+              70,
+              1
+            ],
+            [
+              78,
+              0
+            ],
+            [
+              93,
+              1
+            ],
+            [
+              105,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              50,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              62,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              85,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ],
+            [
+              97,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ]
+          ]
+        },
+        {
+          "nome": "addCheckField",
+          "desc": "(IIZ)V",
+          "tipo_ret": "void",
+          "n_instr": 28,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              17,
+              2
+            ],
+            [
+              25,
+              2
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              13,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              21,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ]
+          ]
+        },
+        {
+          "nome": "checkField",
+          "desc": "(IIZ)Z",
+          "tipo_ret": "int",
+          "n_instr": 36,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              19,
+              1
+            ],
+            [
+              21,
+              0
+            ],
+            [
+              30,
+              1
+            ],
+            [
+              32,
+              0
+            ],
+            [
+              34,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              13,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              24,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ]
+          ]
+        },
+        {
+          "nome": "checkShip",
+          "desc": "(LShip;Z)Z",
+          "tipo_ret": "int",
+          "n_instr": 44,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              20,
+              0
+            ],
+            [
+              35,
+              0
+            ],
+            [
+              42,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              19,
+              "putfield",
+              "BattleCanvas.message"
+            ],
+            [
+              34,
+              "putfield",
+              "BattleCanvas.message"
+            ]
+          ]
+        },
+        {
+          "nome": "addShot",
+          "desc": "(IIZ)V",
+          "tipo_ret": "void",
+          "n_instr": 61,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              19,
+              1
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              34,
+              2
+            ],
+            [
+              43,
+              1
+            ],
+            [
+              50,
+              1
+            ],
+            [
+              58,
+              2
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              14,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ],
+            [
+              22,
+              "getfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              30,
+              "getfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              38,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              46,
+              "getfield",
+              "BattleCanvas.enemyBoard"
+            ],
+            [
+              54,
+              "getfield",
+              "BattleCanvas.enemyBoard"
+            ]
+          ]
+        },
+        {
+          "nome": "countHits",
+          "desc": "(Z)I",
+          "tipo_ret": "int",
+          "n_instr": 39,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              31,
+              9
+            ],
+            [
+              35,
+              9
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              11,
+              "getfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              21,
+              "getfield",
+              "BattleCanvas.enemyBoard"
+            ]
+          ]
+        },
+        {
+          "nome": "getTotalShipPieces",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 2,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              15
+            ]
+          ],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "checkHit",
+          "desc": "(IIZ)Z",
+          "tipo_ret": "int",
+          "n_instr": 36,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              20,
+              1
+            ],
+            [
+              22,
+              1
+            ],
+            [
+              30,
+              1
+            ],
+            [
+              32,
+              1
+            ],
+            [
+              34,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              15,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              25,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ]
+          ]
+        },
+        {
+          "nome": "gameUpdate",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 254,
+          "apis": {
+            "java/lang/StringBuffer.<init>": 3,
+            "java/lang/StringBuffer.append": 12,
+            "java/lang/StringBuffer.toString": 3
+          },
+          "constantes": [
+            [
+              7,
+              1
+            ],
+            [
+              32,
+              1
+            ],
+            [
+              35,
+              2
+            ],
+            [
+              41,
+              5
+            ],
+            [
+              44,
+              5
+            ],
+            [
+              53,
+              1
+            ],
+            [
+              55,
+              0
+            ],
+            [
+              60,
+              5
+            ],
+            [
+              66,
+              1
+            ],
+            [
+              68,
+              0
+            ],
+            [
+              73,
+              4
+            ],
+            [
+              79,
+              1
+            ],
+            [
+              81,
+              0
+            ],
+            [
+              86,
+              3
+            ],
+            [
+              92,
+              1
+            ],
+            [
+              94,
+              0
+            ],
+            [
+              99,
+              2
+            ],
+            [
+              105,
+              1
+            ],
+            [
+              107,
+              0
+            ],
+            [
+              112,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              18,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              20,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              24,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              25,
+              "java/lang/StringBuffer.toString"
+            ],
+            [
+              172,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              174,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              177,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              179,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              183,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              185,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              188,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              190,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              191,
+              "java/lang/StringBuffer.toString"
+            ],
+            [
+              197,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              199,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              202,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              204,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              205,
+              "java/lang/StringBuffer.toString"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "BattleCanvas.phase"
+            ],
+            [
+              4,
+              "getfield",
+              "BattleCanvas.fire"
+            ],
+            [
+              8,
+              "putfield",
+              "BattleCanvas.phase"
+            ],
+            [
+              22,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              26,
+              "putfield",
+              "BattleCanvas.message"
+            ],
+            [
+              28,
+              "getfield",
+              "BattleCanvas.fire"
+            ],
+            [
+              36,
+              "putfield",
+              "BattleCanvas.phase"
+            ],
+            [
+              39,
+              "putfield",
+              "BattleCanvas.message"
+            ],
+            [
+              42,
+              "putfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              45,
+              "putfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              47,
+              "getfield",
+              "BattleCanvas.gamea"
+            ],
+            [
+              51,
+              "getfield",
+              "BattleCanvas.currentOrientation"
+            ],
+            [
+              56,
+              "putfield",
+              "BattleCanvas.currentOrientation"
+            ],
+            [
+              58,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              64,
+              "getfield",
+              "BattleCanvas.o1"
+            ],
+            [
+              69,
+              "putfield",
+              "BattleCanvas.o1"
+            ],
+            [
+              71,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              77,
+              "getfield",
+              "BattleCanvas.o2"
+            ],
+            [
+              82,
+              "putfield",
+              "BattleCanvas.o2"
+            ],
+            [
+              84,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ]
+          ]
+        },
+        {
+          "nome": "getScoreScreen",
+          "desc": "()Ljavax/microedition/lcdui/Screen;",
+          "tipo_ret": "Screen*",
+          "n_instr": 75,
+          "apis": {
+            "javax/microedition/lcdui/Form.<init>": 1,
+            "java/lang/StringBuffer.<init>": 2,
+            "java/lang/StringBuffer.append": 4,
+            "java/lang/StringBuffer.toString": 2,
+            "javax/microedition/lcdui/StringItem.<init>": 2,
+            "javax/microedition/lcdui/Form.append": 2,
+            "javax/microedition/lcdui/Screen.setTitle": 1
+          },
+          "constantes": [
+            [
+              8,
+              5
+            ],
+            [
+              16,
+              1
+            ],
+            [
+              18,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              23,
+              "javax/microedition/lcdui/Form.<init>"
+            ],
+            [
+              35,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              38,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              40,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              41,
+              "java/lang/StringBuffer.toString"
+            ],
+            [
+              42,
+              "javax/microedition/lcdui/StringItem.<init>"
+            ],
+            [
+              43,
+              "javax/microedition/lcdui/Form.append"
+            ],
+            [
+              55,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              57,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              59,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              60,
+              "java/lang/StringBuffer.toString"
+            ],
+            [
+              61,
+              "javax/microedition/lcdui/StringItem.<init>"
+            ],
+            [
+              62,
+              "javax/microedition/lcdui/Form.append"
+            ],
+            [
+              72,
+              "javax/microedition/lcdui/Screen.setTitle"
+            ]
+          ],
+          "fields": [
+            [
+              3,
+              "getfield",
+              "BattleCanvas.score"
+            ],
+            [
+              7,
+              "getfield",
+              "BattleCanvas.phase"
+            ],
+            [
+              13,
+              "getfield",
+              "BattleCanvas.currScore"
+            ],
+            [
+              37,
+              "getfield",
+              "BattleCanvas.currScore"
+            ]
+          ]
+        },
+        {
+          "nome": "keyRepeated",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 11,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.getGameAction": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Canvas.getGameAction"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "keyPressed",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 76,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.getGameAction": 1,
+            "javax/microedition/lcdui/Canvas.repaint": 1
+          },
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              10,
+              9
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              25,
+              1
+            ],
+            [
+              31,
+              9
+            ],
+            [
+              36,
+              1
+            ],
+            [
+              46,
+              1
+            ],
+            [
+              51,
+              1
+            ],
+            [
+              55,
+              1
+            ],
+            [
+              59,
+              1
+            ],
+            [
+              63,
+              1
+            ],
+            [
+              67,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Canvas.getGameAction"
+            ],
+            [
+              74,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ]
+          ],
+          "fields": [
+            [
+              9,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              14,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              17,
+              "putfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              20,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              24,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              27,
+              "putfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              30,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              35,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              38,
+              "putfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              41,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              45,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              48,
+              "putfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              52,
+              "putfield",
+              "BattleCanvas.fire"
+            ],
+            [
+              56,
+              "putfield",
+              "BattleCanvas.gamea"
+            ],
+            [
+              60,
+              "putfield",
+              "BattleCanvas.gameb"
+            ],
+            [
+              64,
+              "putfield",
+              "BattleCanvas.gamec"
+            ],
+            [
+              68,
+              "putfield",
+              "BattleCanvas.gamed"
+            ]
+          ]
+        },
+        {
+          "nome": "restart",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 86,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              6,
+              10
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              11,
+              10
+            ],
+            [
+              12,
+              10
+            ],
+            [
+              16,
+              10
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              20,
+              0
+            ],
+            [
+              23,
+              0
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              38,
+              0
+            ],
+            [
+              45,
+              0
+            ],
+            [
+              52,
+              0
+            ],
+            [
+              56,
+              10
+            ],
+            [
+              60,
+              10
+            ],
+            [
+              63,
+              5
+            ],
+            [
+              67,
+              5
+            ],
+            [
+              71,
+              0
+            ],
+            [
+              74,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              9,
+              "putfield",
+              "BattleCanvas.enemyBoard"
+            ],
+            [
+              14,
+              "putfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              19,
+              "putfield",
+              "BattleCanvas.enemyCheckBoard"
+            ],
+            [
+              27,
+              "getfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              34,
+              "getfield",
+              "BattleCanvas.enemyBoard"
+            ],
+            [
+              41,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              48,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ],
+            [
+              65,
+              "putfield",
+              "BattleCanvas.myShips"
+            ],
+            [
+              69,
+              "putfield",
+              "BattleCanvas.enemyShips"
+            ],
+            [
+              72,
+              "putfield",
+              "BattleCanvas.placedCounter"
+            ],
+            [
+              75,
+              "putfield",
+              "BattleCanvas.roundCount"
+            ],
+            [
+              78,
+              "putfield",
+              "BattleCanvas.overCounter"
+            ],
+            [
+              81,
+              "putfield",
+              "BattleCanvas.showSide"
+            ],
+            [
+              84,
+              "putfield",
+              "BattleCanvas.phase"
+            ]
+          ]
+        },
+        {
+          "nome": "updateScores",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "setCommandListener",
+          "desc": "(Ljavax/microedition/lcdui/CommandListener;)V",
+          "tipo_ret": "void",
+          "n_instr": 7,
+          "apis": {
+            "javax/microedition/lcdui/Displayable.setCommandListener": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Displayable.setCommandListener"
+            ]
+          ],
+          "fields": [
+            [
+              5,
+              "putfield",
+              "BattleCanvas.listener"
+            ]
+          ]
+        },
+        {
+          "nome": "paintLogo",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 51,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 2,
+            "javax/microedition/lcdui/Graphics.fillRect": 1,
+            "javax/microedition/lcdui/Graphics.drawImage": 1,
+            "javax/microedition/lcdui/Graphics.getFont": 1,
+            "javax/microedition/lcdui/Font.stringWidth": 1,
+            "javax/microedition/lcdui/Graphics.drawString": 1
+          },
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              19,
+              80
+            ],
+            [
+              21,
+              2
+            ],
+            [
+              23,
+              0
+            ],
+            [
+              24,
+              20
+            ],
+            [
+              31,
+              62
+            ],
+            [
+              42,
+              2
+            ],
+            [
+              46,
+              14
+            ],
+            [
+              48,
+              20
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              10,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              25,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              28,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              38,
+              "javax/microedition/lcdui/Graphics.getFont"
+            ],
+            [
+              40,
+              "javax/microedition/lcdui/Font.stringWidth"
+            ],
+            [
+              49,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getstatic",
+              "BattleCanvas.groundColor"
+            ],
+            [
+              7,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              9,
+              "getfield",
+              "BattleCanvas.h"
+            ],
+            [
+              12,
+              "getfield",
+              "BattleCanvas.logo"
+            ],
+            [
+              16,
+              "getfield",
+              "BattleCanvas.logo"
+            ],
+            [
+              18,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              27,
+              "getstatic",
+              "BattleCanvas.wallColor"
+            ],
+            [
+              30,
+              "getfield",
+              "BattleCanvas.h"
+            ],
+            [
+              36,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              45,
+              "getfield",
+              "BattleCanvas.h"
+            ]
+          ]
+        },
+        {
+          "nome": "paintGrid",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 69,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 2,
+            "javax/microedition/lcdui/Graphics.fillRect": 1,
+            "javax/microedition/lcdui/Graphics.drawLine": 2
+          },
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              33,
+              10
+            ],
+            [
+              40,
+              11
+            ],
+            [
+              42,
+              0
+            ],
+            [
+              54,
+              10
+            ],
+            [
+              66,
+              11
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              10,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              13,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              37,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ],
+            [
+              63,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getstatic",
+              "BattleCanvas.groundColor"
+            ],
+            [
+              7,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              9,
+              "getfield",
+              "BattleCanvas.h"
+            ],
+            [
+              12,
+              "getstatic",
+              "BattleCanvas.wallColor"
+            ],
+            [
+              20,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              23,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              28,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              31,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              35,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              47,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              50,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              53,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              56,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              61,
+              "getfield",
+              "BattleCanvas.cell"
+            ]
+          ]
+        },
+        {
+          "nome": "paintHits",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;Z)V",
+          "tipo_ret": "void",
+          "n_instr": 162,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 4,
+            "javax/microedition/lcdui/Graphics.fillRect": 4
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              22,
+              1
+            ],
+            [
+              29,
+              1
+            ],
+            [
+              37,
+              1
+            ],
+            [
+              41,
+              1
+            ],
+            [
+              50,
+              2
+            ],
+            [
+              58,
+              1
+            ],
+            [
+              65,
+              1
+            ],
+            [
+              73,
+              1
+            ],
+            [
+              77,
+              1
+            ],
+            [
+              87,
+              1
+            ],
+            [
+              95,
+              1
+            ],
+            [
+              102,
+              1
+            ],
+            [
+              110,
+              1
+            ],
+            [
+              114,
+              1
+            ],
+            [
+              123,
+              2
+            ],
+            [
+              131,
+              1
+            ],
+            [
+              138,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              18,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              43,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              54,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              79,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              91,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              116,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              127,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              152,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ]
+          ],
+          "fields": [
+            [
+              9,
+              "getfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              17,
+              "getstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              21,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              26,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              32,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              36,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              40,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              45,
+              "getfield",
+              "BattleCanvas.myBoard"
+            ],
+            [
+              53,
+              "getstatic",
+              "BattleCanvas.wallColor"
+            ],
+            [
+              57,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              62,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              68,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              72,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              76,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              82,
+              "getfield",
+              "BattleCanvas.enemyBoard"
+            ],
+            [
+              90,
+              "getstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              94,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              99,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              105,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              109,
+              "getfield",
+              "BattleCanvas.cell"
+            ]
+          ]
+        },
+        {
+          "nome": "paintCheck",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;Z)V",
+          "tipo_ret": "void",
+          "n_instr": 162,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 4,
+            "javax/microedition/lcdui/Graphics.fillRect": 4
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              22,
+              1
+            ],
+            [
+              29,
+              1
+            ],
+            [
+              37,
+              1
+            ],
+            [
+              41,
+              1
+            ],
+            [
+              50,
+              2
+            ],
+            [
+              58,
+              1
+            ],
+            [
+              65,
+              1
+            ],
+            [
+              73,
+              1
+            ],
+            [
+              77,
+              1
+            ],
+            [
+              87,
+              1
+            ],
+            [
+              95,
+              1
+            ],
+            [
+              102,
+              1
+            ],
+            [
+              110,
+              1
+            ],
+            [
+              114,
+              1
+            ],
+            [
+              123,
+              2
+            ],
+            [
+              131,
+              1
+            ],
+            [
+              138,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              18,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              43,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              54,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              79,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              91,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              116,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              127,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              152,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ]
+          ],
+          "fields": [
+            [
+              9,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              17,
+              "getstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              21,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              26,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              32,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              36,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              40,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              45,
+              "getfield",
+              "BattleCanvas.myCheckBoard"
+            ],
+            [
+              53,
+              "getstatic",
+              "BattleCanvas.wallColor"
+            ],
+            [
+              57,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              62,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              68,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              72,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              76,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              82,
+              "getfield",
+              "BattleCanvas.enemyCheckBoard"
+            ],
+            [
+              90,
+              "getstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              94,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              99,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              105,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              109,
+              "getfield",
+              "BattleCanvas.cell"
+            ]
+          ]
+        },
+        {
+          "nome": "paintCursor",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 31,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 1,
+            "javax/microedition/lcdui/Graphics.fillRect": 1
+          },
+          "constantes": [
+            [
+              6,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              23,
+              1
+            ],
+            [
+              27,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              2,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              29,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getstatic",
+              "BattleCanvas.pusherColor"
+            ],
+            [
+              5,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              9,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              11,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              16,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              18,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              22,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              26,
+              "getfield",
+              "BattleCanvas.cell"
+            ]
+          ]
+        },
+        {
+          "nome": "paintPlacingShip",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 93,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 1,
+            "javax/microedition/lcdui/Graphics.fillRect": 2
+          },
+          "constantes": [
+            [
+              11,
+              0
+            ],
+            [
+              21,
+              10
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              36,
+              1
+            ],
+            [
+              45,
+              1
+            ],
+            [
+              49,
+              1
+            ],
+            [
+              57,
+              10
+            ],
+            [
+              62,
+              1
+            ],
+            [
+              70,
+              1
+            ],
+            [
+              81,
+              1
+            ],
+            [
+              85,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              6,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              51,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              87,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              5,
+              "getstatic",
+              "BattleCanvas.pusherColor"
+            ],
+            [
+              8,
+              "getfield",
+              "BattleCanvas.currentShip"
+            ],
+            [
+              15,
+              "getfield",
+              "BattleCanvas.currentOrientation"
+            ],
+            [
+              19,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              25,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              29,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              33,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              38,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              40,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              44,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              48,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              55,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              61,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              65,
+              "getfield",
+              "BattleCanvas.cursorx"
+            ],
+            [
+              67,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              72,
+              "getfield",
+              "BattleCanvas.cursory"
+            ],
+            [
+              76,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              80,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              84,
+              "getfield",
+              "BattleCanvas.cell"
+            ]
+          ]
+        },
+        {
+          "nome": "paintShip",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;LShip;Z)V",
+          "tipo_ret": "void",
+          "n_instr": 153,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 1,
+            "javax/microedition/lcdui/Graphics.fillRect": 2
+          },
+          "constantes": [
+            [
+              9,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              5
+            ],
+            [
+              25,
+              4
+            ],
+            [
+              32,
+              3
+            ],
+            [
+              39,
+              2
+            ],
+            [
+              46,
+              1
+            ],
+            [
+              54,
+              5
+            ],
+            [
+              61,
+              4
+            ],
+            [
+              68,
+              3
+            ],
+            [
+              75,
+              2
+            ],
+            [
+              82,
+              1
+            ],
+            [
+              92,
+              1
+            ],
+            [
+              102,
+              1
+            ],
+            [
+              111,
+              1
+            ],
+            [
+              115,
+              1
+            ],
+            [
+              122,
+              1
+            ],
+            [
+              130,
+              1
+            ],
+            [
+              141,
+              1
+            ],
+            [
+              145,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              5,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              117,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              147,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "getstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              21,
+              "getfield",
+              "BattleCanvas.o1"
+            ],
+            [
+              28,
+              "getfield",
+              "BattleCanvas.o2"
+            ],
+            [
+              35,
+              "getfield",
+              "BattleCanvas.o3"
+            ],
+            [
+              42,
+              "getfield",
+              "BattleCanvas.o4"
+            ],
+            [
+              49,
+              "getfield",
+              "BattleCanvas.o5"
+            ],
+            [
+              57,
+              "getfield",
+              "BattleCanvas.e1"
+            ],
+            [
+              64,
+              "getfield",
+              "BattleCanvas.e2"
+            ],
+            [
+              71,
+              "getfield",
+              "BattleCanvas.e3"
+            ],
+            [
+              78,
+              "getfield",
+              "BattleCanvas.e4"
+            ],
+            [
+              85,
+              "getfield",
+              "BattleCanvas.e5"
+            ],
+            [
+              91,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              99,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              106,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              110,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              114,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              121,
+              "getfield",
+              "BattleCanvas.xoffs"
+            ],
+            [
+              127,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              136,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              140,
+              "getfield",
+              "BattleCanvas.cell"
+            ]
+          ]
+        },
+        {
+          "nome": "paintShips",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;Z)V",
+          "tipo_ret": "void",
+          "n_instr": 30,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              27,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              8,
+              "getfield",
+              "BattleCanvas.myShips"
+            ],
+            [
+              14,
+              "getfield",
+              "BattleCanvas.enemyShips"
+            ]
+          ]
+        },
+        {
+          "nome": "paint",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 215,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.getClipX": 1,
+            "javax/microedition/lcdui/Graphics.getClipY": 1,
+            "javax/microedition/lcdui/Graphics.getClipWidth": 1,
+            "javax/microedition/lcdui/Graphics.getClipHeight": 1,
+            "javax/microedition/lcdui/Graphics.setColor": 2,
+            "javax/microedition/lcdui/Graphics.getFont": 2,
+            "javax/microedition/lcdui/Font.stringWidth": 2,
+            "javax/microedition/lcdui/Graphics.drawString": 3
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              38,
+              1
+            ],
+            [
+              50,
+              1
+            ],
+            [
+              82,
+              1
+            ],
+            [
+              96,
+              1
+            ],
+            [
+              104,
+              0
+            ],
+            [
+              129,
+              2
+            ],
+            [
+              133,
+              2
+            ],
+            [
+              135,
+              15
+            ],
+            [
+              137,
+              20
+            ],
+            [
+              160,
+              2
+            ],
+            [
+              164,
+              2
+            ],
+            [
+              166,
+              15
+            ],
+            [
+              168,
+              20
+            ],
+            [
+              176,
+              1
+            ],
+            [
+              180,
+              1
+            ],
+            [
+              184,
+              1
+            ],
+            [
+              192,
+              0
+            ],
+            [
+              196,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              11,
+              "javax/microedition/lcdui/Graphics.getClipX"
+            ],
+            [
+              14,
+              "javax/microedition/lcdui/Graphics.getClipY"
+            ],
+            [
+              17,
+              "javax/microedition/lcdui/Graphics.getClipWidth"
+            ],
+            [
+              20,
+              "javax/microedition/lcdui/Graphics.getClipHeight"
+            ],
+            [
+              114,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              124,
+              "javax/microedition/lcdui/Graphics.getFont"
+            ],
+            [
+              127,
+              "javax/microedition/lcdui/Font.stringWidth"
+            ],
+            [
+              138,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ],
+            [
+              155,
+              "javax/microedition/lcdui/Graphics.getFont"
+            ],
+            [
+              158,
+              "javax/microedition/lcdui/Font.stringWidth"
+            ],
+            [
+              169,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ],
+            [
+              203,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              213,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ]
+          ],
+          "fields": [
+            [
+              5,
+              "getfield",
+              "BattleCanvas.bwidth"
+            ],
+            [
+              8,
+              "getfield",
+              "BattleCanvas.bheight"
+            ],
+            [
+              24,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              29,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              36,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              41,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              48,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              53,
+              "getfield",
+              "BattleCanvas.cell"
+            ],
+            [
+              58,
+              "getfield",
+              "BattleCanvas.bwidth"
+            ],
+            [
+              61,
+              "getfield",
+              "BattleCanvas.bwidth"
+            ],
+            [
+              65,
+              "getfield",
+              "BattleCanvas.bheight"
+            ],
+            [
+              68,
+              "getfield",
+              "BattleCanvas.bheight"
+            ],
+            [
+              71,
+              "getfield",
+              "BattleCanvas.phase"
+            ],
+            [
+              92,
+              "getfield",
+              "BattleCanvas.showSide"
+            ],
+            [
+              110,
+              "getfield",
+              "BattleCanvas.overCounter"
+            ],
+            [
+              113,
+              "getstatic",
+              "BattleCanvas.pusherColor"
+            ],
+            [
+              117,
+              "putfield",
+              "BattleCanvas.overStr"
+            ],
+            [
+              120,
+              "getfield",
+              "BattleCanvas.overStr"
+            ],
+            [
+              122,
+              "getfield",
+              "BattleCanvas.w"
+            ],
+            [
+              126,
+              "getfield",
+              "BattleCanvas.overStr"
+            ]
+          ]
+        },
+        {
+          "nome": "<clinit>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 13,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "BattleCanvas.wallColor"
+            ],
+            [
+              3,
+              "putstatic",
+              "BattleCanvas.groundColor"
+            ],
+            [
+              5,
+              "putstatic",
+              "BattleCanvas.packetColor"
+            ],
+            [
+              7,
+              "putstatic",
+              "BattleCanvas.storeColor"
+            ],
+            [
+              9,
+              "putstatic",
+              "BattleCanvas.pusherColor"
+            ],
+            [
+              11,
+              "putstatic",
+              "BattleCanvas.useDottedLine"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "javax/microedition/lcdui/Canvas.<init>": 1,
+        "javax/microedition/lcdui/Display.getDisplay": 1,
+        "java/util/Random.<init>": 1,
+        "javax/microedition/lcdui/Image.createImage": 1,
+        "javax/microedition/lcdui/Canvas.getHeight": 1,
+        "javax/microedition/lcdui/Canvas.getWidth": 1,
+        "javax/microedition/lcdui/Canvas.repaint": 2,
+        "javax/microedition/lcdui/Display.isColor": 1,
+        "javax/microedition/lcdui/Display.numColors": 1,
+        "java/lang/Integer.parseInt": 1,
+        "java/util/Random.nextInt": 1,
+        "java/lang/StringBuffer.<init>": 7,
+        "java/lang/StringBuffer.append": 22,
+        "java/lang/StringBuffer.toString": 7,
+        "java/io/PrintStream.println": 1,
+        "javax/microedition/lcdui/Form.<init>": 1,
+        "javax/microedition/lcdui/StringItem.<init>": 2,
+        "javax/microedition/lcdui/Form.append": 2,
+        "javax/microedition/lcdui/Screen.setTitle": 1,
+        "javax/microedition/lcdui/Canvas.getGameAction": 2,
+        "javax/microedition/lcdui/Displayable.setCommandListener": 1,
+        "javax/microedition/lcdui/Graphics.setColor": 17,
+        "javax/microedition/lcdui/Graphics.fillRect": 15,
+        "javax/microedition/lcdui/Graphics.drawImage": 1,
+        "javax/microedition/lcdui/Graphics.getFont": 3,
+        "javax/microedition/lcdui/Font.stringWidth": 3,
+        "javax/microedition/lcdui/Graphics.drawString": 4,
+        "javax/microedition/lcdui/Graphics.drawLine": 2,
+        "javax/microedition/lcdui/Graphics.getClipX": 1,
+        "javax/microedition/lcdui/Graphics.getClipY": 1,
+        "javax/microedition/lcdui/Graphics.getClipWidth": 1,
+        "javax/microedition/lcdui/Graphics.getClipHeight": 1
+      },
+      "padroes": [
+        "CANVAS",
+        "TEM_PAINT",
+        "TEM_INPUT",
+        "USA_IMAGE"
+      ]
+    },
+    {
+      "arquivo": "Battleship.class",
+      "nome": "Battleship",
+      "super": "MIDlet",
+      "campos": [
+        {
+          "nome": "display",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "tipo_c": "Display*"
+        },
+        {
+          "nome": "canvas",
+          "desc": "LBattleCanvas;",
+          "tipo_c": "BattleCanvas*"
+        },
+        {
+          "nome": "score",
+          "desc": "LScore;",
+          "tipo_c": "Score*"
+        },
+        {
+          "nome": "scoreScreen",
+          "desc": "Ljavax/microedition/lcdui/Screen;",
+          "tipo_c": "Screen*"
+        },
+        {
+          "nome": "alert",
+          "desc": "Ljavax/microedition/lcdui/Alert;",
+          "tipo_c": "Alert*"
+        },
+        {
+          "nome": "restartCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "exitCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "scoresCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "okCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "meCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "enemyCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "aboutCommand",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 82,
+          "apis": {
+            "javax/microedition/midlet/MIDlet.<init>": 1,
+            "javax/microedition/lcdui/Command.<init>": 7,
+            "javax/microedition/lcdui/Display.getDisplay": 1,
+            "javax/microedition/lcdui/Alert.<init>": 1
+          },
+          "constantes": [
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              21
+            ],
+            [
+              14,
+              7
+            ],
+            [
+              15,
+              60
+            ],
+            [
+              22,
+              1
+            ],
+            [
+              23,
+              25
+            ],
+            [
+              30,
+              4
+            ],
+            [
+              31,
+              30
+            ],
+            [
+              38,
+              4
+            ],
+            [
+              39,
+              24
+            ],
+            [
+              46,
+              1
+            ],
+            [
+              47,
+              22
+            ],
+            [
+              54,
+              5
+            ],
+            [
+              55,
+              30
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "javax/microedition/midlet/MIDlet.<init>"
+            ],
+            [
+              8,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              16,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              24,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              32,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              40,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              48,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              56,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              60,
+              "javax/microedition/lcdui/Display.getDisplay"
+            ],
+            [
+              79,
+              "javax/microedition/lcdui/Alert.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              9,
+              "putfield",
+              "Battleship.restartCommand"
+            ],
+            [
+              17,
+              "putfield",
+              "Battleship.exitCommand"
+            ],
+            [
+              25,
+              "putfield",
+              "Battleship.scoresCommand"
+            ],
+            [
+              33,
+              "putfield",
+              "Battleship.okCommand"
+            ],
+            [
+              41,
+              "putfield",
+              "Battleship.meCommand"
+            ],
+            [
+              49,
+              "putfield",
+              "Battleship.enemyCommand"
+            ],
+            [
+              57,
+              "putfield",
+              "Battleship.aboutCommand"
+            ],
+            [
+              61,
+              "putfield",
+              "Battleship.display"
+            ],
+            [
+              66,
+              "putfield",
+              "Battleship.score"
+            ],
+            [
+              72,
+              "getfield",
+              "Battleship.score"
+            ],
+            [
+              74,
+              "putfield",
+              "Battleship.canvas"
+            ],
+            [
+              80,
+              "putfield",
+              "Battleship.alert"
+            ]
+          ]
+        },
+        {
+          "nome": "startApp",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 50,
+          "apis": {
+            "java/io/PrintStream.println": 1,
+            "javax/microedition/lcdui/Displayable.addCommand": 6,
+            "javax/microedition/lcdui/Display.setCurrent": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              6,
+              "java/io/PrintStream.println"
+            ],
+            [
+              14,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              19,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              24,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              29,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              34,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              39,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              48,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Battleship.score"
+            ],
+            [
+              4,
+              "getstatic",
+              "System.out"
+            ],
+            [
+              8,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              11,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              13,
+              "getfield",
+              "Battleship.scoresCommand"
+            ],
+            [
+              16,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              18,
+              "getfield",
+              "Battleship.restartCommand"
+            ],
+            [
+              21,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              23,
+              "getfield",
+              "Battleship.exitCommand"
+            ],
+            [
+              26,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              28,
+              "getfield",
+              "Battleship.meCommand"
+            ],
+            [
+              31,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              33,
+              "getfield",
+              "Battleship.enemyCommand"
+            ],
+            [
+              36,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              38,
+              "getfield",
+              "Battleship.aboutCommand"
+            ],
+            [
+              41,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              45,
+              "getfield",
+              "Battleship.display"
+            ],
+            [
+              47,
+              "getfield",
+              "Battleship.canvas"
+            ]
+          ]
+        },
+        {
+          "nome": "pauseApp",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "destroyApp",
+          "desc": "(Z)V",
+          "tipo_ret": "void",
+          "n_instr": 14,
+          "apis": {
+            "javax/microedition/lcdui/Display.setCurrent": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              3,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Battleship.display"
+            ],
+            [
+              5,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              8,
+              "getfield",
+              "Battleship.score"
+            ],
+            [
+              11,
+              "getfield",
+              "Battleship.score"
+            ]
+          ]
+        },
+        {
+          "nome": "commandAction",
+          "desc": "(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "tipo_ret": "void",
+          "n_instr": 99,
+          "apis": {
+            "javax/microedition/lcdui/Displayable.addCommand": 2,
+            "javax/microedition/lcdui/Displayable.setCommandListener": 2,
+            "javax/microedition/lcdui/Display.setCurrent": 3,
+            "javax/microedition/midlet/MIDlet.notifyDestroyed": 1,
+            "java/lang/StringBuffer.<init>": 1,
+            "java/lang/StringBuffer.append": 2,
+            "java/lang/StringBuffer.toString": 1,
+            "java/io/PrintStream.println": 1
+          },
+          "constantes": [
+            [
+              51,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              21,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              25,
+              "javax/microedition/lcdui/Displayable.setCommandListener"
+            ],
+            [
+              30,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ],
+            [
+              44,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ],
+            [
+              54,
+              "javax/microedition/midlet/MIDlet.notifyDestroyed"
+            ],
+            [
+              72,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              76,
+              "javax/microedition/lcdui/Displayable.setCommandListener"
+            ],
+            [
+              81,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ],
+            [
+              91,
+              "java/lang/StringBuffer.<init>"
+            ],
+            [
+              93,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              95,
+              "java/lang/StringBuffer.append"
+            ],
+            [
+              96,
+              "java/lang/StringBuffer.toString"
+            ],
+            [
+              97,
+              "java/io/PrintStream.println"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "Battleship.restartCommand"
+            ],
+            [
+              5,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              10,
+              "getfield",
+              "Battleship.scoresCommand"
+            ],
+            [
+              14,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              16,
+              "putfield",
+              "Battleship.scoreScreen"
+            ],
+            [
+              18,
+              "getfield",
+              "Battleship.scoreScreen"
+            ],
+            [
+              20,
+              "getfield",
+              "Battleship.okCommand"
+            ],
+            [
+              23,
+              "getfield",
+              "Battleship.scoreScreen"
+            ],
+            [
+              27,
+              "getfield",
+              "Battleship.display"
+            ],
+            [
+              29,
+              "getfield",
+              "Battleship.scoreScreen"
+            ],
+            [
+              34,
+              "getfield",
+              "Battleship.okCommand"
+            ],
+            [
+              38,
+              "getfield",
+              "Battleship.scoreScreen"
+            ],
+            [
+              41,
+              "getfield",
+              "Battleship.display"
+            ],
+            [
+              43,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              48,
+              "getfield",
+              "Battleship.exitCommand"
+            ],
+            [
+              57,
+              "getstatic",
+              "List.SELECT_COMMAND"
+            ],
+            [
+              61,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              65,
+              "getfield",
+              "Battleship.canvas"
+            ],
+            [
+              67,
+              "putfield",
+              "Battleship.scoreScreen"
+            ],
+            [
+              69,
+              "getfield",
+              "Battleship.scoreScreen"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "javax/microedition/midlet/MIDlet.<init>": 1,
+        "javax/microedition/lcdui/Command.<init>": 7,
+        "javax/microedition/lcdui/Display.getDisplay": 1,
+        "javax/microedition/lcdui/Alert.<init>": 1,
+        "java/io/PrintStream.println": 2,
+        "javax/microedition/lcdui/Displayable.addCommand": 8,
+        "javax/microedition/lcdui/Display.setCurrent": 5,
+        "javax/microedition/lcdui/Displayable.setCommandListener": 2,
+        "javax/microedition/midlet/MIDlet.notifyDestroyed": 1,
+        "java/lang/StringBuffer.<init>": 1,
+        "java/lang/StringBuffer.append": 2,
+        "java/lang/StringBuffer.toString": 1
+      },
+      "padroes": [
+        "MIDLET",
+        "TEM_STARTAPP"
+      ]
+    },
+    {
+      "arquivo": "Board.class",
+      "nome": "Board",
+      "super": "Object",
+      "campos": [],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 3,
+          "apis": {
+            "java/lang/Object.<init>": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ]
+          ],
+          "fields": []
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 1
+      },
+      "padroes": []
+    },
+    {
+      "arquivo": "Score.class",
+      "nome": "Score",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "store",
+          "desc": "Ljavax/microedition/rms/RecordStore;",
+          "tipo_c": "RecordStore*"
+        },
+        {
+          "nome": "scoreValue",
+          "desc": "I",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 9,
+          "apis": {
+            "java/lang/Object.<init>": 1
+          },
+          "constantes": [
+            [
+              6,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "Score.store"
+            ],
+            [
+              7,
+              "putfield",
+              "Score.scoreValue"
+            ]
+          ]
+        },
+        {
+          "nome": "open",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 34,
+          "apis": {
+            "javax/microedition/rms/RecordStore.openRecordStore": 1,
+            "javax/microedition/rms/RecordStore.enumerateRecords": 1,
+            "javax/microedition/rms/RecordEnumeration.nextRecordId": 1,
+            "javax/microedition/rms/RecordEnumeration.hasNextElement": 1,
+            "java/lang/Throwable.printStackTrace": 1
+          },
+          "constantes": [
+            [
+              2,
+              1
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              32,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              3,
+              "javax/microedition/rms/RecordStore.openRecordStore"
+            ],
+            [
+              17,
+              "javax/microedition/rms/RecordStore.enumerateRecords"
+            ],
+            [
+              21,
+              "javax/microedition/rms/RecordEnumeration.nextRecordId"
+            ],
+            [
+              24,
+              "javax/microedition/rms/RecordEnumeration.hasNextElement"
+            ],
+            [
+              29,
+              "java/lang/Throwable.printStackTrace"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "Score.store"
+            ],
+            [
+              8,
+              "getfield",
+              "Score.store"
+            ],
+            [
+              13,
+              "getfield",
+              "Score.store"
+            ]
+          ]
+        },
+        {
+          "nome": "getScore",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 3,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Score.scoreValue"
+            ]
+          ]
+        },
+        {
+          "nome": "setScore",
+          "desc": "(I)Z",
+          "tipo_ret": "int",
+          "n_instr": 5,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "Score.scoreValue"
+            ]
+          ]
+        },
+        {
+          "nome": "close",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 11,
+          "apis": {
+            "javax/microedition/rms/RecordStore.closeRecordStore": 1,
+            "java/lang/Throwable.printStackTrace": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              5,
+              "javax/microedition/rms/RecordStore.closeRecordStore"
+            ],
+            [
+              9,
+              "java/lang/Throwable.printStackTrace"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Score.store"
+            ],
+            [
+              4,
+              "getfield",
+              "Score.store"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 1,
+        "javax/microedition/rms/RecordStore.openRecordStore": 1,
+        "javax/microedition/rms/RecordStore.enumerateRecords": 1,
+        "javax/microedition/rms/RecordEnumeration.nextRecordId": 1,
+        "javax/microedition/rms/RecordEnumeration.hasNextElement": 1,
+        "java/lang/Throwable.printStackTrace": 2,
+        "javax/microedition/rms/RecordStore.closeRecordStore": 1
+      },
+      "padroes": []
+    },
+    {
+      "arquivo": "Ship.class",
+      "nome": "Ship",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "CRUISER",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "CARRIER",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "FRIGATTE",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "BATTLESHIP",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "SUBMARINE",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "x",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "y",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "type",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "horizontally",
+          "desc": "Z",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "(III)V",
+          "tipo_ret": "void",
+          "n_instr": 6,
+          "apis": {
+            "java/lang/Object.<init>": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "Ship.type"
+            ]
+          ]
+        },
+        {
+          "nome": "getLength",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 15,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              5
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Ship.type"
+            ]
+          ]
+        },
+        {
+          "nome": "getName",
+          "desc": "()Ljava/lang/String;",
+          "tipo_ret": "String*",
+          "n_instr": 15,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Ship.type"
+            ]
+          ]
+        },
+        {
+          "nome": "getX",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 3,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Ship.x"
+            ]
+          ]
+        },
+        {
+          "nome": "getY",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 3,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Ship.y"
+            ]
+          ]
+        },
+        {
+          "nome": "setX",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 4,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "Ship.x"
+            ]
+          ]
+        },
+        {
+          "nome": "setY",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 4,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "Ship.y"
+            ]
+          ]
+        },
+        {
+          "nome": "getType",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 3,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Ship.type"
+            ]
+          ]
+        },
+        {
+          "nome": "setOrientation",
+          "desc": "(Z)V",
+          "tipo_ret": "void",
+          "n_instr": 3,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "Ship.horizontally"
+            ]
+          ]
+        },
+        {
+          "nome": "getOrientation",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 2,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              0,
+              "getstatic",
+              "Ship.horizontally"
+            ]
+          ]
+        },
+        {
+          "nome": "<clinit>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 3,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "Ship.horizontally"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 1
+      },
+      "padroes": []
+    }
+  ],
+  "n_classes": 5
+}
