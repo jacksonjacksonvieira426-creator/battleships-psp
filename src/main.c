@@ -1,4 +1,4 @@
-// battleships - main.c gerado por V13
+// battleships - main.c gerado por V14
 #include <pspkernel.h>
 #include <string.h>
 #include <stdlib.h>
@@ -16,51 +16,81 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER);
 #define SCR_W 480
 #define SCR_H 272
 
-// Tipos J2ME (auto-detectados)
+// Tipos J2ME (auto-detectados, dedup)
 typedef void* Alert;
+typedef void* AlertType;
 typedef void* Boolean;
 typedef void* Byte;
+typedef void* ByteArrayInputStream;
+typedef void* ByteArrayOutputStream;
+typedef void* Calendar;
 typedef void* Canvas;
 typedef void* Character;
+typedef void* ChoiceGroup;
 typedef void* Class_x;
 typedef void* Command;
 typedef void* CommandListener;
+typedef void* Control;
 typedef void* DataInputStream;
+typedef void* DataOutputStream;
+typedef void* Date;
+typedef void* DateField;
+typedef void* DeviceControl;
 typedef void* DirectGraphics;
 typedef void* Display;
 typedef void* Displayable;
 typedef void* Double_x;
+typedef void* Enumeration;
 typedef void* Exception;
 typedef void* Float_x;
 typedef void* Font;
 typedef void* Form;
 typedef void* FullCanvas;
 typedef void* GameCanvas;
+typedef void* Gauge;
 typedef void* Graphics;
+typedef void* Hashtable;
 typedef void* IOException;
 typedef void* Image;
+typedef void* ImageItem;
 typedef void* InputStream;
 typedef void* Integer;
+typedef void* Item;
+typedef void* Iterator;
 typedef void* List;
+typedef void* ListItem;
+typedef void* Locale;
 typedef void* Long_x;
 typedef void* MIDlet;
+typedef void* Manager;
 typedef void* Math;
 typedef void* Object;
 typedef void* OutputStream;
+typedef void* Player;
 typedef void* PrintStream;
+typedef void* Process;
+typedef void* Queue;
 typedef void* Random;
 typedef void* RecordEnumeration;
 typedef void* RecordStore;
 typedef void* RecordStoreException;
+typedef void* Runtime;
 typedef void* Screen;
 typedef void* Short_x;
+typedef void* Sound;
+typedef void* Spacer;
+typedef void* Stack;
 typedef void* String;
 typedef void* StringBuffer;
 typedef void* StringItem;
+typedef void* StringTokenizer;
 typedef void* System;
+typedef void* TextBox;
 typedef void* TextField;
 typedef void* Thread;
 typedef void* Throwable;
+typedef void* Ticker;
+typedef void* TimeZone;
 typedef void* Timer;
 typedef void* TimerTask;
 typedef void* Vector;
@@ -125,15 +155,15 @@ struct BattleCanvas_s {
     int**        enemyBoard;
     int**        myCheckBoard;
     int**        enemyCheckBoard;
-    Ship**       myShips;
-    Ship**       enemyShips;
-    Ship*        currentShip;
+    void*        myShips;
+    void*        enemyShips;
+    void*        currentShip;
     int          placedCounter;
     int          roundCount;
     int          showSide;
     int          winSide;
-    String*      message;
-    String*      overStr;
+    void*        message;
+    void*        overStr;
     int          cursorx;
     int          cursory;
     int          fire;
@@ -141,20 +171,20 @@ struct BattleCanvas_s {
     int          gameb;
     int          gamec;
     int          gamed;
-    Image*       logo;
+    void*        logo;
     int          cell;
     int          xoffs;
     int          w;
     int          h;
     int          bwidth;
     int          bheight;
-    Score*       score;
-    Battleship*  battleship;
-    Display*     display;
-    CommandListener* listener;
-    Random*      random;
-    Form*        scoreForm;
-    TextBox*     levelText;
+    void*        score;
+    void*        battleship;
+    void*        display;
+    void*        listener;
+    void*        random;
+    void*        scoreForm;
+    void*        levelText;
     int          wallColor;
     int          groundColor;
     int          packetColor;
@@ -164,18 +194,18 @@ struct BattleCanvas_s {
 };
 
 struct Battleship_s {
-    Display*     display;
-    BattleCanvas* canvas;
-    Score*       score;
-    Screen*      scoreScreen;
-    Alert*       alert;
-    Command*     restartCommand;
-    Command*     exitCommand;
-    Command*     scoresCommand;
-    Command*     okCommand;
-    Command*     meCommand;
-    Command*     enemyCommand;
-    Command*     aboutCommand;
+    void*        display;
+    void*        canvas;
+    void*        score;
+    void*        scoreScreen;
+    void*        alert;
+    void*        restartCommand;
+    void*        exitCommand;
+    void*        scoresCommand;
+    void*        okCommand;
+    void*        meCommand;
+    void*        enemyCommand;
+    void*        aboutCommand;
 };
 
 struct Board_s {
@@ -183,7 +213,7 @@ struct Board_s {
 };
 
 struct Score_s {
-    RecordStore* store;
+    void*        store;
     int          scoreValue;
 };
 
