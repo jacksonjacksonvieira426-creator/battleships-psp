@@ -1,4 +1,4 @@
-// battleships - main.c gerado por V12
+// battleships - main.c gerado por V13
 #include <pspkernel.h>
 #include <string.h>
 #include <stdlib.h>
@@ -16,58 +16,54 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER);
 #define SCR_W 480
 #define SCR_H 272
 
-// Tipos J2ME (todos como void*)
-typedef void* Image;
-typedef void* Graphics;
-typedef void* DirectGraphics;
-typedef void* Font;
-typedef void* String;
-typedef void* StringBuffer;
+// Tipos J2ME (auto-detectados)
+typedef void* Alert;
+typedef void* Boolean;
+typedef void* Byte;
+typedef void* Canvas;
+typedef void* Character;
+typedef void* Class_x;
 typedef void* Command;
+typedef void* CommandListener;
+typedef void* DataInputStream;
+typedef void* DirectGraphics;
 typedef void* Display;
 typedef void* Displayable;
-typedef void* Canvas;
+typedef void* Double_x;
+typedef void* Exception;
+typedef void* Float_x;
+typedef void* Font;
+typedef void* Form;
 typedef void* FullCanvas;
 typedef void* GameCanvas;
+typedef void* Graphics;
+typedef void* IOException;
+typedef void* Image;
+typedef void* InputStream;
+typedef void* Integer;
+typedef void* List;
+typedef void* Long_x;
+typedef void* MIDlet;
+typedef void* Math;
+typedef void* Object;
+typedef void* OutputStream;
+typedef void* PrintStream;
 typedef void* Random;
+typedef void* RecordEnumeration;
+typedef void* RecordStore;
+typedef void* RecordStoreException;
+typedef void* Screen;
+typedef void* Short_x;
+typedef void* String;
+typedef void* StringBuffer;
+typedef void* StringItem;
+typedef void* System;
+typedef void* TextField;
+typedef void* Thread;
+typedef void* Throwable;
 typedef void* Timer;
 typedef void* TimerTask;
 typedef void* Vector;
-typedef void* List;
-typedef void* Form;
-typedef void* TextField;
-typedef void* InputStream;
-typedef void* DataInputStream;
-typedef void* OutputStream;
-typedef void* RecordStore;
-typedef void* Thread;
-typedef void* MIDlet;
-typedef void* Object;
-typedef void* Class;
-typedef void* Math;
-typedef void* System;
-typedef void* Integer;
-typedef void* Long;
-typedef void* Short;
-typedef void* Byte;
-typedef void* Character;
-typedef void* Boolean;
-typedef void* Float;
-typedef void* Double;
-typedef void* Sound;
-typedef void* DeviceControl;
-typedef void* SpriteEvent;
-typedef void* SpriteListener;
-typedef void* SpriteAction;
-typedef void* MIDP;
-typedef void* SoundListener;
-typedef void* Player;
-typedef void* PlayerListener;
-typedef void* Control;
-typedef void* Manager;
-typedef void* DataInputStream2;
-typedef void* ByteArrayInputStream;
-typedef void* ByteArrayOutputStream;
 
 // Stubs de biblioteca
 void j2me_canvas_repaint(void) { }
@@ -75,7 +71,7 @@ void j2me_canvas_serviceRepaints(void) { }
 void j2me_gc(void) { }
 void* j2me_image_get_graphics(void* img) { return img; }
 
-// Forward typedefs das classes do projeto
+// Forward typedefs
 typedef struct BattleCanvas_s BattleCanvas;
 typedef struct BattleCanvas_s BattleCanvas_s;
 typedef struct Battleship_s Battleship;
